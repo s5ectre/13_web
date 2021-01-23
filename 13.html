@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kharchenko</title>
+</head>
+<body>
+
+<script>
+
+    let isAdmin = confirm("Ви - адміністратор?");
+    alert(isAdmin);
+
+    if (confirm("Сказати привіт?")) {
+        alert("Привіт!")}
+    else
+        alert("Ви натиснули кнопку відміна");
+
+    let years = prompt("Скільки вам років?", "100");
+    alert("Вам " + years + " років!");
+
+    let test = prompt("Тест", "Видимо это уже устарело, и так и так выводит нормально");
+
+    let a = 10;
+    let  b = +prompt("Введіть число");
+    let c = a + b;
+    alert("ваше число + 10 =" +c);
+
+    let A, B, rez;
+        A = +prompt("Введіть змінну А:");
+        B = +prompt("Введіть змінну B:");
+        rez = A + B;
+            alert("Відповідь: " + A + "+" + B + "=" + rez);
+
+    document.write(Date());
+</script>
+
+</body>
+</html>

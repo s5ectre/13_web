@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Kharchenko</title>
+    <style>
+
+.main{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+     width: 100%;
+ }
+input {
+    width: 75px;
+}
+.name{
+    margin-top: 50px;
+    display: none;
+    margin-left: 200px;
+    width: 1000px;
+    height: 100px;
+    background: #ffd5cd;
+    box-shadow: 15px 15px 10px lightgray;
+    font-family: Avenir;
+    font-size: 30pt;
+    padding-bottom: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.one{
+    width: 350px;
+    margin-left: 35px;
+    left:100px;
+    background: antiquewhite;
+    padding: 20px 35px;
+    font-family: "Courier New";
+    line-height: 1.5;
+    box-shadow: 15px 15px 10px lightgray;
+}
+
+.two{
+    margin-top: 25px;
+    width: 350px;
+    margin-left: 40px;
+    background: burlywood;
+    padding: 20px 35px;
+    font-family: "Courier New";
+    box-shadow: 15px 15px 10px lightgray;
+}
+
+.three{
+    margin-top: 50px;
+    width: 350px;
+    margin-left: 35px;
+    padding: 20px 35px;
+    font-family: "Courier New";
+    background: crimson;
+    box-shadow: 15px 15px 10px lightgray;
+}
+    </style>
+</head>
+<body>
+<div class="main">
+<div class="one">
+    <p>
+        Напишіть скрипт для складання двох чисел, двох рядків, рядка і числа.
+    </p>
+    <label for="a">Введите первое число</label>
+    <input type="text" id="a" value="123" name="a" onclick="value=''"><br>
+    <label for="b">Введите второе число</label>
+    <input type="text" id="b" value="123" name="b" onclick="value=''"><br>
+    <label for="c">Введите слово или букву</label>
+    <input type="text" id="c" value="abc" name="c" onclick="value=''"><br>
+    <label for="d">Введите слово или букву</label>
+    <input type="text" id="d" value="abc" name="d" onclick="value=''"><br><br>
+    <input type="button" onclick="button1()" value="Обчислить">
+    <div id="output"></div>
+    <br>
+    <script>
+        function button1() {
+            let a = document.getElementById("a").value;
+            let a1 = Number(a);
+            let b = document.getElementById("b").value;
+            let b1 = Number(b);
+            let sum = a1 + b1;
+            let s = document.getElementById("c").value;
+            let s1 = document.getElementById("d").value;
+            let sum2 = s + s1;
+            let sum3 = s + a;
+
+            document.getElementById("output").innerHTML = "1) "+ sum +"<br>2) "+ sum2 + "<br>3) " + sum3;
+        }
+    </script>
+</div>
+
+<div class="two">
+    <p>
+        Використовуючи JavaScript знайдіть значення виразу (25*x*2+17*y) /5+888 при x=v*2.5-n,
+        y=v*0.3, і значення виразу (87*y/8+2*x/5-33)*6 при x=7*v-5, y=5*v-7
+    </p>
+    <label for="v">Введите v</label>
+    <input type="text" id="v" value="0" name="v" onclick="value=''"><br>
+    <label for="n">Введите n</label>
+    <input type="text" id="n" value="0" name="n" onclick="value=''"><br><br>
+    <input type="button" onclick="button2()" value="Обчислить">
+    <div id="output1"></div>
+    <script>
+        function button2(){
+            let v = document.getElementById("v").value;
+            let v1 = Number(v);
+            let n = document.getElementById("n").value;
+            let n1 = Number(n);
+            let x1 = v1 * 2.5 - n1;
+            let y1 = v1 * 0.3;
+            let rez1 = (25 * x1 * 2 + 17 * y1) / 5 + 888;
+            let x2 = v1 * 2.5 - n1;
+            let y2 = v1 * 0.3;
+            let rez2 = (87 * y2 / 8 + 2 * x2 / 5 - 33) * 6;
+            document.getElementById("output1").innerHTML =
+                "Первое выражение = " + Math.round(rez1)+"<br>Второе выражение = "+Math.round(rez2);
+        }
+    </script>
+</div>
+
+<div class="three">
+    <p>
+        За допомогою вікна діалогу дізнайтеся у відвідувача сторінки його ім&#39;я.
+        І виведіть його у окремому блоці. Запропонуйте відвідувачу ввести два числа по черзі.
+        Виведіть у вікно alert результат складання.
+    </p>
+    <input type="button" onclick="button3()" value="Let's go">
+            <script>
+            function button3(){
+                let name = prompt("Как тебя зовут?", "Гость");
+                let x = +prompt("Введите первое число");
+                let x1 = Number(x);
+                let y = +prompt("Введите второе число");
+                let y1 = Number(y);
+                let z = x + y;
+                alert( x1 + " + " + y1 + " = " + z)
+                document.getElementById("wasp").innerHTML = name;
+                document.getElementById("name").style.display = "block";
+            }
+        </script>
+</div>
+
+<div class="name" id="name">
+    <p><b id="wasp"></b>, спасибо что прошли это сложное испытание</p>
+</div>
+
+</div>
+
+</body>
+</html>
